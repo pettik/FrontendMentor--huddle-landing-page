@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+  --white: hsl(100, 100%, 100%);
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  background-color: var(--violet);
+  background-image: url(images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto 0;
+}
+
+h1 {
+  color: var(--white);
+  font-weight: var(--font-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header,
+.section {
+  padding: 4.5rem 0 2rem;
+}
+/* HEADER SECTION */
+header {
+  display: flex;
+  justify-items: flex-start;
+
+  margin-top: 4rem;
+  margin-bottom: 3.5rem;
+}
+
+header img.logo {
+  width: 220px;
+}
+
+/* CENTER PART SECTION */
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  flex: 50%;
+}
+
+.textbox {
+  padding: 2.75rem 1.5rem 0 7rem;
+}
+
+h1 {
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 18px;
+  color: hsla(0, 0%, 100%, 0.8);
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  color: var(--violet);
+  background: var(--white);
+  padding: 1rem 4.5rem;
+  border-radius: 2rem;
+  font-weight: 400;
+  font-family: 'Poppins';
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: 0.4s;
+}
+
+.btn:hover {
+  background-color: var(--soft-magenta);
+  color: var(--white);
+}
+
+/* SOCIAL ICONS SECTION */
+.social-btns {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3.6rem;
+}
+.social-btns ul {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1.1rem;
+  margin-right: 0.6rem;
+}
+
+.social-btn a {
+  color: var(--white);
+  font-size: 1.3rem;
+}
+
+.social-btn a .icon {
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  padding: 0.5rem;
+  transition: 0.4s;
+}
+
+.social-btn a .icon:hover {
+  border: 1px solid var(--soft-magenta);
+  color: var(--soft-magenta);
+}
+
+.attribution {
+  position: absolute;
+  font-weight: 400;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+  color: var(--white);
+}
+
+.attribution a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+}
+.attribution a:hover {
+  color: var(--soft-magenta);
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    background-image: url(images/bg-mobile.svg);
+    background-size: contain;
+    background-position: top;
+    max-height: 100vh;
+  }
+
+  .container {
+    flex-direction: column;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    flex-shrink: 1;
+    flex-basis: 1;
+  }
+
+  header,
+  .section {
+    padding: 0 0 1rem;
+  }
+
+  header {
+    margin-top: 2rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .column {
+    flex: 100%;
+  }
+
+  header img.logo {
+    width: 150px;
+  }
+
+  .textbox {
+    padding: 0;
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 19px;
+    padding: 0 1rem;
+  }
+
+  .btn {
+    padding: 0.8rem 5.5rem;
+    font-size: 14.5px;
+  }
+
+  .social-btns {
+    padding-top: 2rem;
+    justify-content: center;
+  }
+
+  .social-btns ul {
+    column-gap: 0.8rem;
+  }
+
+  .social-btn a {
+    font-size: 1rem;
+  }
+
+  .attribution {
+    display: none;
+  }
+}
